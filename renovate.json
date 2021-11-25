@@ -1,0 +1,75 @@
+{
+  "extends": [
+    "config:base",
+    "docker:enableMajor"
+  ],
+  "enabledManagers": [
+    "npm",
+    "dockerfile",
+    "docker-compose",
+    "gomod"
+  ],
+  "force": {
+    "constraints": {
+      "node": "< 17.0.0",
+      "npm": "< 9.0.0"
+    }
+  },
+  "pruneStaleBranches": false,
+  "rangeStrategy": "bump",
+  "commitMessagePrefix": "Update",
+  "commitMessageAction": "",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
+  "commitBody": "Change-type: patch",
+  "prHourlyLimit": 0,
+  "labels": [
+    "dependencies"
+  ],
+  "ignoreDeps": [
+    "node"
+  ],
+  "packageRules": [
+    {
+      "groupName": "internal-patch",
+      "matchPackagePatterns": ["UltimateTournament"],
+      "commitMessageTopic": "dependencies",
+      "commitMessageExtra": "(internal patch bumps)",
+      "automerge": true
+    },
+    {
+      "groupName": "external-non-major",
+      "excludePackagePatterns": ["UltimateTournament"],
+      "commitMessageTopic": "dependencies",
+      "commitMessageExtra": "(external non-major bumps)",
+      "extends": ["schedule:weekends"],
+      "matchCurrentVersion": ">=1.0.0",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "external-major",
+      "matchPackagePatterns": ["UltimateTournament"],
+      "commitMessageTopic": "dependencies",
+      "commitMessageExtra": "(external major bumps)",
+      "extends": ["schedule:weekends"],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "groupName": "external-zero-minor",
+      "matchPackagePatterns": ["UltimateTournament"],
+      "commitMessageTopic": "dependencies",
+      "commitMessageExtra": "(external v0 minor bumps)",
+      "extends": ["schedule:weekends"],
+      "matchCurrentVersion": "<1.0.0",
+      "matchUpdateTypes": [
+        "minor"
+      ]
+    }
+  ]
+}
