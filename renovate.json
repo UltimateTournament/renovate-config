@@ -52,7 +52,7 @@
     },
     {
       "groupName": "external-major",
-      "matchPackagePatterns": ["UltimateTournament"],
+      "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "commitMessageExtra": "(external major bumps)",
       "extends": ["schedule:weekends"],
@@ -62,7 +62,7 @@
     },
     {
       "groupName": "external-zero-minor",
-      "matchPackagePatterns": ["UltimateTournament"],
+      "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "commitMessageExtra": "(external v0 minor bumps)",
       "extends": ["schedule:weekends"],
