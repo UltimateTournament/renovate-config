@@ -35,7 +35,8 @@
       "matchPackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "commitMessageExtra": "(internal patch bumps)",
-      "automerge": true
+      "automerge": true,
+      "recreateClosed": true
     },
     {
       "groupName": "external-non-major",
@@ -48,7 +49,8 @@
         "minor",
         "patch"
       ],
-      "automerge": true
+      "automerge": true,
+      "recreateClosed": true
     },
     {
       "groupName": "external-major",
@@ -58,7 +60,8 @@
       "extends": ["schedule:weekends"],
       "matchUpdateTypes": [
         "major"
-      ]
+      ],
+      "recreateClosed": true
     },
     {
       "groupName": "external-zero-minor",
@@ -69,7 +72,8 @@
       "matchCurrentVersion": "<1.0.0",
       "matchUpdateTypes": [
         "minor"
-      ]
+      ],
+      "recreateClosed": true
     }
   ]
 }
