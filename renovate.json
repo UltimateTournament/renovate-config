@@ -9,12 +9,6 @@
     "docker-compose",
     "gomod"
   ],
-  "force": {
-    "constraints": {
-      "node": "< 17.0.0",
-      "npm": "< 9.0.0"
-    }
-  },
   "pruneStaleBranches": false,
   "rangeStrategy": "bump",
   "commitMessagePrefix": "Update",
@@ -31,10 +25,7 @@
   ],
   "packageRules": [
     {
-      "groupName": "internal-patch",
       "matchPackagePatterns": ["UltimateTournament"],
-      "commitMessageTopic": "dependencies",
-      "commitMessageExtra": "(internal patch bumps)",
       "automerge": true,
       "recreateClosed": true
     },
