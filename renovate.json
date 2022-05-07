@@ -1,7 +1,8 @@
 {
   "extends": [
     "config:base",
-    "docker:enableMajor"
+    "docker:enableMajor",
+    "schedule:weekdays"
   ],
   "enabledManagers": [
     "npm",
@@ -16,7 +17,7 @@
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
   "commitBody": "Change-type: patch",
-  "prHourlyLimit": 0,
+  "prHourlyLimit": 1,
   "labels": [
     "dependencies"
   ],
@@ -34,7 +35,7 @@
       "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "commitMessageExtra": "(external non-major bumps)",
-      "extends": ["schedule:weekends"],
+      "extends": ["schedule:earlyMondays"],
       "matchCurrentVersion": ">=1.0.0",
       "matchUpdateTypes": [
         "minor",
@@ -48,7 +49,7 @@
       "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "commitMessageExtra": "(external major bumps)",
-      "extends": ["schedule:weekends"],
+      "extends": ["schedule:earlyMondays"],
       "matchUpdateTypes": [
         "major"
       ],
@@ -59,7 +60,7 @@
       "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "commitMessageExtra": "(external v0 minor bumps)",
-      "extends": ["schedule:weekends"],
+      "extends": ["schedule:earlyMondays"],
       "matchCurrentVersion": "<1.0.0",
       "matchUpdateTypes": [
         "minor"
