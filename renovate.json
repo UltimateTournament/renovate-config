@@ -4,6 +4,9 @@
     "docker:enableMajor",
     "schedule:weekdays"
   ],
+  "encrypted": {
+    "npmToken": "wcFMA/xDdHCJBTolAQ/8CQFRTNiWqlMdntCfq5anYFQWnpltYFTfJPdooJaveFpV3Up8FOT6PQ0cQOWdGOhrbdF3zmoC+7y3QPDF3ny44GWsfrnBHhGsIAqBDoh4aHiFZkAeVELzbptZs9MEfq5aJDTkxcHgF9vc9LFW7rhtoj90myCP59xS0jTffg9hQeJCDX5h9d5ESUm575HFHY1x5NHgwoJMrHIq6z8aSHdpZ0pOrrRGuIibaNyJ7F/WahsQV89xdMpyA/aSg1loK+gZBFgVMimYfQVEWgsjJfeQi5f3OxvwlWzbB1eCHp3pyNo0eqx/JKhX5UCYY3saBKpewWdIBJyAsYN5hKGyfpHBwoLbDt1hf23IXifKbnoW1s5kyDCRyjxWqwb0+zM8sAVaOU1ph3+rFhtgEK6jIvjDeRRWfxJ5JnmB/4F/Auk9H6YffThuaTo/qOmfQEJez8M7ku8HIPpDD13+z+x9aJKEmH83i5U2hoC1oussUsp+Vrf/C9bDRtIDW5/6mEOVRmCLwphf+leGIInquLVmxjAAnJtvEQRoXFqulu9oflGfJ8R8mSw3tqUVrPWzbD0mcJj02qidDD2NYdXsXYiyFRUgl87werqvq/t5wZLfPQvQAjItO4YMonJfnMPIxv12zECYRjQs1nVz7n+87EIRyQaNP+8XSBLk2IXdoB2GBbh7zwjSgQFHBX7P2JgMBMC4ZdDdhZB+wl8pBXm6LLoaTYxp4Z2FzwyqjvMvt34Za2WyF5LfVlgw2un168UF0zhUV+lOuVYiP9hlw4rJeNqyrINd7Ps6VQEFT1JiYAO8pP70KJUvXUZFU5wbnLulB7dGKe/1ftJVBftRyziE2WGXxbuwSEcz3A"
+  },
   "enabledManagers": [
     "npm",
     "dockerfile",
