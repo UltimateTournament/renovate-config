@@ -11,7 +11,8 @@
     "npm",
     "dockerfile",
     "docker-compose",
-    "gomod"
+    "gomod",
+    "github-actions"
   ],
   "pruneStaleBranches": false,
   "rangeStrategy": "bump",
