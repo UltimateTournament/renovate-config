@@ -51,7 +51,6 @@
     {
       "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
-      "commitMessageExtra": "(external major bump)",
       "extends": ["schedule:earlyMondays"],
       "matchUpdateTypes": [
         "major"
