@@ -49,6 +49,7 @@
       "recreateClosed": true
     },
     {
+      "commitMessagePrefix": "Major Update {{depName}}",
       "excludePackagePatterns": ["UltimateTournament"],
       "commitMessageTopic": "dependencies",
       "extends": ["schedule:earlyMondays"],
